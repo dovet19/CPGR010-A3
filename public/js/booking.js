@@ -15,7 +15,9 @@ async function createBooking(
     startDate,
     endDate,
     destination,
-    payment
+    payment.cardNumber,
+    payment.expiryDate,
+    payment.CVC
   );
   setResult("Booking Confirmed!");
 }
