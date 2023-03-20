@@ -85,9 +85,9 @@ function BookingForm() {
     setDestination(event.target.value);
   };
 
-  // const handlePaymentChange = (event) => {
-  //   setPayment(event.target.value);
-  // };
+  const handlePaymentChange = (event) => {
+    setPayment(event.target.value);
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -177,9 +177,10 @@ function BookingForm() {
               id="cardNumber"
               placeholder="XXXX XXXX XXXX XXXX"
               value={payment.cardNumber}
-              onChange={(value) =>
-                setPayment({ ...payment, cardNumber: value })
+              onChange={(e) =>
+                setPayment({ ...payment, cardNumber: e.target.value })
               }
+              required
             />
           </div>
         </div>
@@ -190,13 +191,14 @@ function BookingForm() {
             </label>
             <input
               className="form-control"
-              type="number"
+              type="text"
               id="expiryDate"
               placeholder="MM/YY"
               value={payment.expiryDate}
-              onChange={(value) =>
-                setPayment({ ...payment, expiryDate: value })
+              onChange={(e) =>
+                setPayment({ ...payment, expiryDate: e.target.value })
               }
+              required
             />
           </div>
           <div className="col-sm-2 mb2">
@@ -209,7 +211,8 @@ function BookingForm() {
               id="cvc"
               placeholder="CVC"
               value={payment.CVC}
-              onChange={(value) => setPayment({ ...payment, CVC: value })}
+              onChange={(e) => setPayment({ ...payment, CVC: e.target.value })}
+              required
             />
           </div>
         </div>
