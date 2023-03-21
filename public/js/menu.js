@@ -5,6 +5,7 @@ const navLinks = [
   { text: "Home", url: "/index" },
   { text: "Travel Package", url: "package.html" },
   { text: "Booking", url: "booking.html" },
+  { text: "Confirmation", url: "confirmation.html" },
   // { text: 'Show all packages', url: '04-01-products-bootstrap.html' }
 ];
 
